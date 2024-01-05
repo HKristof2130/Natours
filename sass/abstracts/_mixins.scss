@@ -1,0 +1,11 @@
+@mixin clearfix{
+    &:after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin calculate-column-width($gutter-count, $column-count, $gutter-width){
+    width: calc((100% - #{$gutter-count} * #{$gutter-width}) / #{$column-count});
+}
